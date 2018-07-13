@@ -1,0 +1,78 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.App {
+  width: 65%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+
+#title {
+  flex-grow: 1;
+}
+
+nav {
+  flex-grow: 2;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 14px;
+  flex-wrap: wrap;
+}
+
+li p {
+  padding: 0px 12px 0px 12px;
+}
+
+#projects:hover, #contact:hover {
+	color: #635F6B !important;
+	cursor: pointer;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  margin: 20% auto;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects-text {
+  margin-bottom: 35px;
+}
+
+#events-vid {
+  height: 667px;
+  width: 375px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 24px 0;
+}
+
+i {
+  padding: 0 12px 0 12px;
+}
