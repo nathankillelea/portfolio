@@ -27,7 +27,7 @@ class App extends Component {
             img={require('./assets/illini_events.png')}
             backgroundColor='#DDEDC2'
             description='Created a mobile app to help advertisers increase traffic to their events and to help students find events they may be interested in around campus.'
-            tags={['JavaScript', 'React Native']}
+            tags={['JavaScript', 'React Native', 'Redux']}
             sourceLink='https://github.com/nathankillelea/CS468-Event-App'
           />
           <Card
