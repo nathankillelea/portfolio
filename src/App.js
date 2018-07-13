@@ -28,6 +28,7 @@ class App extends Component {
             backgroundColor='#DDEDC2'
             description='Created a mobile app to help advertisers increase traffic to their events and to help students find events they may be interested in around campus.'
             tags={['JavaScript', 'React Native']}
+            sourceLink='https://github.com/nathankillelea/CS468-Event-App'
           />
           <Card
             title={'JavaScript Game'}
@@ -35,6 +36,7 @@ class App extends Component {
             backgroundColor='#A9C6CF'
             description='Developed a survival/wave game with a friend in pure JavaScript; the goal of the game is to gain as many points as possible by defeating enemies and chaining combos. The intent of this project was to learn how to program a game. Since neither of us are artists, the visuals were drawn in GIMP and are placeholder.'
             tags={['JavaScript', 'HTML5']}
+            sourceLink='https://github.com/nathankillelea/CS242-Final-Project'
           />
           <Card
             title={'Message in a Bottle'}
@@ -42,6 +44,7 @@ class App extends Component {
             backgroundColor='#FFABA6'
             description='Created a mobile app with a group of five students. The app allows users to set goals, vent their frustrations throughout the process, and finally motivates users to complete these goals with motivational quotes. I worked on the front-end of this app with two other students.'
             tags={['JavaScript', 'React Native', 'Node.js', 'Express', 'MongoDB']}
+            sourceLink='https://github.com/nathankillelea/CS498RK-Final-Project'
           />
         </section>
         <footer>

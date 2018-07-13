@@ -43,7 +43,7 @@ img {
   margin-bottom: 25px;
 }
 
-.tags {
+.tags, .links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -58,4 +58,14 @@ img {
   border-radius: 6px;
   margin-right: 12.5px;
   margin-bottom: 12.5px;
+}
+
+#sourceLink {
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  border-radius: 6px;
+  margin-right: 12.5px;
+  margin-top: 12.5px;
+  text-decoration: none;
 }
