@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
 import './App.css';
+import scrollToComponent from 'react-scroll-to-component';
 
 class App extends Component {
   render() {
@@ -12,15 +13,15 @@ class App extends Component {
           </div>
           <nav>
             <ul>
-              <li><p id='projects'>Projects</p></li>
-              <li><p id='contact'>Contact</p></li>
+              <li><p id='projects' onClick={() => scrollToComponent(this.Projects, {offset: -30, align: 'top', duration: 750})}>Projects</p></li>
+              <li><p id='contact' onClick={() => scrollToComponent(this.Contact, {offset: 0, align: 'top', duration: 1500})}>Contact</p></li>
             </ul>
           </nav>
         </header>
         <section className='about'>
           <h1>I am a recent Computer Science graduate from the University of Illinois at Urbana-Champaign. My main interest is front-end development.</h1>
         </section>
-        <section className='projects'>
+        <section className='projects' ref={(section) => { this.Projects = section;}}>
           <h1 id='projects-text'>Projects</h1>
           <Card
             title={'Illini Events'}
@@ -47,17 +48,20 @@ class App extends Component {
             sourceLink='https://github.com/nathankillelea/CS498RK-Final-Project'
           />
         </section>
-        <footer>
-          <a href='https://www.linkedin.com/in/nathan-killelea/'>
-            <i className="fa fa-linkedin fa-3x" style={{color:'#0077B5'}}></i>
-          </a>
-          <a href='https://github.com/nathankillelea'>
-            <i className="fa fa-github fa-3x" style={{color:'#333'}}></i>
-          </a>
-          <a href='mailto:nathan.killelea@gmail.com'>
-            <i className="fa fa-envelope-o fa-3x" style={{color:'#ff4343'}}></i>
-          </a>
-        </footer>
+        <section className='contact' ref={(section) => {this.Contact = section;}}>
+          <h1>Contact me!</h1>
+          <footer>
+            <a href='https://www.linkedin.com/in/nathan-killelea/'>
+              <i className="fa fa-linkedin fa-3x" style={{color:'#0077B5'}}></i>
+            </a>
+            <a href='https://github.com/nathankillelea'>
+              <i className="fa fa-github fa-3x" style={{color:'#333'}}></i>
+            </a>
+            <a href='mailto:nathan.killelea@gmail.com'>
+              <i className="fa fa-envelope-o fa-3x" style={{color:'#ff4343'}}></i>
+            </a>
+          </footer>
+        </section>
       </div>
     );
   }
