@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Markazi+Text|Oswald:400');
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -13,7 +13,7 @@ p {
   font-size: 1em;
 }
 
-h1 {
+h1, span {
   font-size: 1.6em;
 }
 
@@ -30,13 +30,19 @@ header {
 }
 
 #title {
-  flex-grow: 1;
-  font-size: 2.2em;
-  font-weight: 600;
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+
+#title h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  font-weight: 400;
 }
 
 nav {
-  flex-grow: 2;
+  flex: 2;
   align-items: center;
   display: flex;
   justify-content: flex-end;
@@ -45,47 +51,53 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  padding-left: 14px;
+  padding-left: 12px;
   flex-wrap: wrap;
 }
 
-li p {
-  padding: 0px 12px 0 12px;
+li {
+  margin: 0px 12px 0 12px;
 }
 
-@media only screen and (max-width: 475px) {
-  li p {
-    padding-top: 7px;
-    padding-bottom: 7px;
-  }
+li div {
+  position: relative;
+}
+
+li div p {
+  padding: 6px 0 6px 0;
+}
+
+li div p:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 3px;
+  background-color: #2BBFBD;
+  transition: width .2s ease-in-out;
 }
 
 #projects:hover, #contact:hover {
-	color: #635F6B !important;
-	cursor: pointer;
+  cursor: pointer;
+}
+
+#projects:hover:after, #contact:hover:after {
+  width: 100%;
 }
 
 .about {
   display: flex;
   align-items: center;
-  margin: 20% auto;
-}
-
-@media only screen and (max-width: 813px) {
-  .App {
-    width: 85%;
-  }
-
-  .about {
-    margin: 112px auto;
-  }
+  margin: 192px auto;
 }
 
 .about h1 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Markazi Text', serif;
+  font-size: 2.4em;
 }
 
 .projects {
@@ -95,7 +107,16 @@ li p {
 }
 
 #projects-text {
-  margin-bottom: 35px;
+  margin-bottom: 96px;
+}
+
+#projects-text::after, #contact-text::after {
+  display: block;
+  margin: 0 auto;
+  content: "";
+  margin-top: 30px;
+  border: 4px solid #2BBFBD;
+  width: 60%;
 }
 
 .contact {
@@ -113,4 +134,28 @@ footer {
 
 i {
   padding: 0 12px 0 12px;
+}
+
+@media only screen and (max-width: 813px) {
+  .App {
+    width: 85%;
+  }
+
+  .about {
+    margin: 112px auto;
+  }
+
+  #projects-text {
+    margin-bottom: 56px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  #title h1 {
+    font-size: 2.5em;
+  }
+
+  .about h1 {
+    font-size: 2em;
+  }
 }
