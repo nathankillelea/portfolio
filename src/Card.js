@@ -20,12 +20,10 @@ class Card extends Component {
               })}
               </div>
               <div className="links">
-                <div id="source-link">
-                <a href={this.props.sourceLink}>
-                    <i className="fa fa-github fa" style={{color:'#fff'}}></i>
-                    Source Code
+                <a href={this.props.sourceLink} id="source-link">
+                  <i className="fa fa-github fa" style={{color:'#fff'}}></i>
+                  Source Code
                 </a>
-                </div>
               </div>
             </div>
           </div>
